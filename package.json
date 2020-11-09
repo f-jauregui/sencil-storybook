@@ -23,7 +23,7 @@
     "stencil:generate": "stencil generate",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "build": "concurrently \"stencil build --docs\" \"build-storybook\""
+    "build": "concurrently \"stencil build --docs\" \"build-storybook -c .storybook -o public --quiet\""
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
