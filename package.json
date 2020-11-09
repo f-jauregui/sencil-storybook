@@ -1,7 +1,7 @@
 {
-  "name": "stencil-storybook-starter",
+  "name": "stencil-storybook-ui",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Stencil Component with Storybook",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -26,16 +26,16 @@
     "build": "concurrently \"stencil build --docs\" \"build-storybook\""
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@stencil/core": "^1.8.8",
+    "@babel/core": "^7.12.3",
+    "@stencil/core": "^1.17.4",
     "@storybook/html": "^6.0.28",
     "@storybook/preset-scss": "^1.0.3",
     "@types/jest": "^26.0.15",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "concurrently": "^5.3.0"
   },
   "license": "MIT",
   "dependencies": {
-    "@storybook/addon-knobs": "^5.3.14"
+    "@storybook/addon-knobs": "^5.3.21"
   }
 }
