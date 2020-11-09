@@ -15,15 +15,16 @@
     "loader/"
   ],
   "scripts": {
-    "stencil:build": "stencil build --docs",
-    "stencil:watch": "stencil build --watch",
+    "start": "concurrently \"stencil build --watch --quiet\" \"start-storybook -p 6006\"",
+    "build": "concurrently \"stencil build --docs\" \"build-storybook -c .storybook -o public --quiet\"",
     "stencil:start": "stencil build --dev --watch --serve",
-    "stencil:test": "stencil test --spec --e2e",
-    "stencil:test:watch": "stencil test --spec --e2e --watchAll",
-    "stencil:generate": "stencil generate",
+    "stencil:watch": "stencil build --watch",
+    "stencil:build": "stencil build --docs",
+    "stencil:test": "stencil test --spec",
+    "stencil:test:watch": "stencil test --spec --watchAll",
+    "stencil:create-component": "stencil generate",
     "storybook:start": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
-    "build": "concurrently \"stencil build --docs\" \"build-storybook -c .storybook -o public --quiet\""
+    "storybook:build": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
