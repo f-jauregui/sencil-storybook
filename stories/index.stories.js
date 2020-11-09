@@ -1,12 +1,17 @@
-import {text} from '@storybook/addon-knobs';
+import { select } from '@storybook/addon-knobs';
 
 export default {
   title: 'Demo',
 };
 
-export const MyComponent = () => {
-  const firstName = text('First name', 'Stencil');
-  const middleName = text('Middle name', 'Storybook');
-  const lastName = text('Last name', 'Starter');
-  return `<my-component first="${firstName}" middle="${middleName}" last="${lastName}"></my-component>`;
+export const MyButton = () => {
+  const label = 'Colors';
+  const options = {
+    Primary: 'primary',
+    Secondary: 'secondary',
+  };
+  const defaultValue = 'primary';
+  const groupId = 'GROUP-ID1';
+  const type = select(label, options, defaultValue, groupId);
+  return `<my-button type="${type}" ></my-button>`;
 };
