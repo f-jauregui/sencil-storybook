@@ -1,1 +1,16 @@
 
+.my-special-button {
+    background-color: #4CBF80; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.my-special-button:hover {
+    background-color: #4CBF99;
+    cursor: pointer;
+}
