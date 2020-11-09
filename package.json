@@ -15,28 +15,26 @@
     "loader/"
   ],
   "scripts": {
-    "start": "concurrently \"stencil build --watch --quiet\" \"start-storybook -p 6006\"",
-    "build": "concurrently \"stencil build --docs\" \"build-storybook -c .storybook -o public --quiet\"",
+    "start": "concurrently \"npm run stencil:watch\" \"npm run storybook:start\"",
+    "build": "concurrently \"npm run stencil:build\" \"npm run storybook:build\"",
     "stencil:start": "stencil build --dev --watch --serve",
-    "stencil:watch": "stencil build --watch",
+    "stencil:watch": "stencil build --watch --quiet",
     "stencil:build": "stencil build --docs",
     "stencil:test": "stencil test --spec",
     "stencil:test:watch": "stencil test --spec --watchAll",
     "stencil:create-component": "stencil generate",
     "storybook:start": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook -c .storybook -o public --quiet"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@stencil/core": "^1.17.4",
+    "@storybook/addon-knobs": "^5.3.21",
     "@storybook/html": "^6.0.28",
-    "@storybook/preset-scss": "^1.0.3",
     "@types/jest": "^26.0.15",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.3.0"
   },
   "license": "MIT",
-  "dependencies": {
-    "@storybook/addon-knobs": "^5.3.21"
-  }
+  "dependencies": {}
 }
