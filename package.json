@@ -1,9 +1,9 @@
 {
-  "name": "stencil-storybook-ui",
+  "name": "stailbook",
   "version": "0.0.1",
-  "description": "Stencil Component with Storybook",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "description": "Stencil Components styled with Tailwind CSS on top of a Storybook",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
@@ -15,10 +15,10 @@
     "loader/"
   ],
   "scripts": {
-    "start": "concurrently \"npm run stencil:watch\" \"npm run storybook:start\"",
-    "build": "concurrently \"npm run stencil:build\" \"npm run storybook:build\"",
+    "start": "npm run stencil:watch & npm run storybook:start",
+    "build": "npm run stencil:build & npm run storybook:build",
     "stencil:start": "stencil build --dev --watch --serve",
-    "stencil:watch": "stencil build --watch --quiet",
+    "stencil:watch": "stencil build --watch",
     "stencil:build": "stencil build --docs",
     "stencil:test": "stencil test --spec",
     "stencil:test:watch": "stencil test --spec --watchAll",
@@ -28,12 +28,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@stencil/core": "^1.17.4",
-    "@storybook/addon-knobs": "^5.3.21",
+    "@stencil/core": "^2.3.0",
     "@storybook/html": "^6.0.28",
     "@types/jest": "^26.0.15",
-    "babel-loader": "^8.1.0",
-    "concurrently": "^5.3.0"
+    "babel-loader": "^8.2.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "webpack": "^5.4.0"
   },
   "license": "MIT",
   "dependencies": {}
