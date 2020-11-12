@@ -15,8 +15,8 @@
     "loader/"
   ],
   "scripts": {
-    "start": "npm run stencil:watch & npm run storybook:start",
-    "build": "npm run stencil:build & npm run storybook:build",
+    "start": "yarn stencil:build && (yarn storybook:start & yarn stencil:watch)",
+    "build": "yarn stencil:build && yarn storybook:build",
     "stencil:start": "stencil build --dev --watch --serve",
     "stencil:watch": "stencil build --watch",
     "stencil:build": "stencil build --docs",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "@stencil/core": "^2.3.0",
     "@storybook/html": "^6.0.28",
     "@types/jest": "^26.0.15",
